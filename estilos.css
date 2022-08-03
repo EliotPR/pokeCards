@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: rgb(136, 123, 118);
+    color: rgb(29, 29, 26);
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 60px;
+}
+
+.box {
+    display: grid;
+    gap: 4rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 18rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.cards {
+    position: relative;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid rgb(13, 7, 37);
+    border-radius: 7%;
+    text-align: center;
+}
+
+.btn {
+    position: flex; 
+    right: 132px;
+    bottom: 110px;
+    cursor: pointer;
+}
+
+.img {
+    padding: 0.5rem;
+    border-radius: 7%;
+    width: 110px;
+}
