@@ -2,21 +2,21 @@ const documentFragment = document.createDocumentFragment();
 const myBox = document.getElementById("box");
 
 
-const creandoPokemon = (title, id, serie, pokemon) => {
+const creandoPokemon = (title, clase, serie, pokemon) => {
     img = `<img class="img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemon}.png">`;
-    title = `<h3>Pokemon: ${title}</h3>`;
-    id = `<h4>ID: ${id}</h4>`;
+    title = `<h3>Pokémon: ${title}</h3>`;
+    clase = `<h4>Clase: ${clase}</h4>`;
     serie = `<h4>Serie: ${serie}</h4>`;
-    button = `<button class="btn">addToCart</button>`;
-    return [img, title, id, serie, button];
+    button = `<button class="btn">Atrápalo!</button>`;
+    return [img, title, clase, serie, button];
 };
 
 const cartasPokemon = (pokemones) => {
 
     for (let i = 0; i < pokemones.length; i++) {
-        let randomId = Math.round(Math.random() * 1 + 5); 
+        let randomClase = Math.round(Math.random() * 1 + 5); 
         let randomSerie = Math.round(Math.random() * 150); 
-        let pokemon = creandoPokemon(`${i}`, `${randomId}`, `${randomSerie}`,`${pokemones[i]}`);
+        let pokemon = creandoPokemon(`${i}`, `${randomClase}`, `${randomSerie}`,`${pokemones[i]}`);
         let div = document.createElement("DIV");
         console.log(div); 
         div.classList.add("cards"); 
@@ -31,6 +31,17 @@ cartasPokemon(pokemones);
 
 const form = document.getElementById("formm");
 
+
+class pokedex {
+    constructor (nombre, tipo, id) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.id = id;
+    }
+}
+
+
+
 const enviarFormm = (event) => {
     
     event.preventDefault();
@@ -41,8 +52,8 @@ const enviarFormm = (event) => {
         name.value, 
         imagen.value);
 
-    if (name.value.length === 0) alert ("Los datos no son validos, verifique")
-    
+    if (name.value.length, imagen.value.length === 0) alert ("Los datos no son validos, verifique") 
+        
     pokemones.push (imagen.value)
     console.log(pokemones)
     myBox.innerHTML=""
@@ -51,3 +62,9 @@ const enviarFormm = (event) => {
 console.log(form)
 
 form.addEventListener("submit", enviarFormm);
+
+
+
+
+
+

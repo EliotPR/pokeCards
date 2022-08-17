@@ -5,19 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>DOMdomDOMdom</title>
+    <title>PokeCARDS</title>
 </head>
 <body>
-    <header>
-        <h1 class="F1">Pokemón</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contacto.html">Contacto</a></li>               
-            </ul>
-        </nav>    
-    </header>
-    <form id="formm" class="formulario" action="">
+        <div class="header">
+            <img class="logo" src="img/Pokemon-Logo.jpg" alt="">
+            <div class="header-right">
+                <a class="active" href="#home">Home</a>
+            </div>
+        </div>
+    <div class="bg-image">
+        <form id="formm" class="formulario" action="">
     
         <p>Pokemon</p>
         <input type="text" name="name" placeholder="Pokemon" class="field"> <br>
@@ -25,12 +23,12 @@
         <p>ID de Pokemon</p>
         <input type="text" name="imagen" placeholder="ID de Pokemon, ejm:001" class="field"> <br>
         
-        <button class="bttn">Agregar</button>
+        <button class="bttn">Agregar Pokemon!</button>
     
     </form>
     
     <div id="box" class="box"></div>
-    
+    </div>
     <script src="index.js"></script>
 </body>
 </html>     
