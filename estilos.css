@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background: rgb(30, 98, 255);
+    background: #f1f1f1;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,7 +18,7 @@ body {
     float: left;
     color: black;
     text-align: center;
-    padding: 12px;
+    padding: 6px;
     text-decoration: none;
     font-size: 18px; 
     line-height: 25px;
@@ -26,11 +26,12 @@ body {
 }
 
 .header .logo {
-    max-height: 20rem;
+    max-height: 20em;
     margin: auto;
     display: block;
     width: 15em;
     height: 15em;
+    border-radius: 80px;
 }
 
 .header a:hover {
@@ -39,8 +40,7 @@ body {
 }
 
 .header a.active {
-    background-color: dodgerblue;
-    color: white;
+    color: #000;
 }
 
 .header-right {
@@ -52,19 +52,14 @@ body {
     .header a {
     text-align: center;
     width: 100px;
-    /* margin-left: 8.3em;
-    margin-top: 10px; */
-    margin: 20px 100px auto;
+    margin: 20px 0 0 70px;
 }
-    .header a:hover {
-        color: #000;
-    }
     
     .header .logo {
         margin: auto;
         display: block;
-        width: 14em;
-        height: 11em;
+        width: 15em;
+        height: 15em;
 }
     
 .header-right {
@@ -77,7 +72,7 @@ body {
     gap: 4rem;
     grid-auto-flow: dense;
     grid-auto-rows: 18rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 
 .cards {
@@ -85,9 +80,10 @@ body {
     height: 330px;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid rgb(13, 7, 37);
-    border-radius: 7%;
+    /* border: .5px  solid rgb(13, 7, 37); */
+    border-radius: 9%;
     text-align: center;
+    background-color: #fff;
 }
 
 .btn {
