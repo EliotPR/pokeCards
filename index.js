@@ -71,7 +71,18 @@ catchAlert.onclick = (e) => {
 };
 
 
+const url = 'https://pokeapi.co/api/v2/pokemon/1/'
 
+fetch(url)
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+    let element = document.querySelector('.cards')
+    element.innerHTML = `<img src='${data.sprites.front_default}'/>
+                        <p>Pokémon: ${data.name}</p>
+                        <p> Type: ${data.types[0].type.name}</p>`
+})
+.catch(err=>console.log(err))
 
 
 
